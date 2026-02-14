@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💰 AI-Based Personal Finance Management System
 
-## Getting Started
+An intelligent web application that helps users manage personal finances using **Artificial Intelligence**, automation, and modern full-stack technologies.  
+The system enables users to track income and expenses, analyze spending behavior, and receive AI-generated financial insights for better decision-making.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔐 Secure Authentication (Google & Email Login)
+- 📊 Smart Financial Dashboard
+- 🧾 AI-Based Receipt Scanner
+- 🤖 Automatic Expense Categorization
+- 💸 Income & Expense Tracking
+- 📅 Automated Recurring Transactions
+- 📈 Budget Planning & Alerts
+- 🧠 AI-Generated Monthly Financial Insights
+- 📧 Email Notifications
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 AI Capabilities
 
-## Learn More
+- Multimodal receipt understanding (image + text)
+- Automatic extraction of transaction details
+- Spending pattern analysis
+- Personalized financial recommendations
+- Natural language insight generation
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- Next.js 15
+- React 19
+- Tailwind CSS
+- Shadcn UI
 
-## Deploy on Vercel
+### Backend
+- Next.js Server Actions
+- Node.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Database
+- PostgreSQL (Supabase)
+- Prisma ORM
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Authentication & Security
+- Clerk Authentication
+- Arcjet (Rate Limiting & Bot Protection)
+
+### AI & Automation
+- Google Gemini 1.5 Flash
+- Inngest (Background Jobs & Automation)
+
+---
