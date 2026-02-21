@@ -1,11 +1,12 @@
 "use server";
 
-import { db } from "@/lib/prisma";
+import { initDb } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
 export async function getCurrentBudget(accountId) {
   try {
+    const db = await initDb();
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized");
 
@@ -65,6 +66,7 @@ export async function getCurrentBudget(accountId) {
 
 export async function updateBudget(amount) {
   try {
+    const db = await initDb();
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized");
 

@@ -1,6 +1,6 @@
 "use server";
 
-import { db } from "@/lib/prisma";
+import { initDb } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
@@ -16,6 +16,7 @@ const serializeDecimal = (obj) => {
 };
 
 export async function getAccountWithTransactions(accountId) {
+  const db = await initDb();
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 

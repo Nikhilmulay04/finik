@@ -1,7 +1,7 @@
 "use server";
 
 import { auth } from "@clerk/nextjs/server";
-import { db } from "@/lib/prisma";
+import { initDb } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import aj from "@/lib/arcjet";
@@ -17,6 +17,7 @@ const serializeAmount = (obj) => ({
 // Create Transaction
 export async function createTransaction(data) {
   try {
+    const db = await initDb();
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized");
 
@@ -100,6 +101,7 @@ export async function createTransaction(data) {
 }
 
 export async function getTransaction(id) {
+  const db = await initDb();
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
@@ -123,6 +125,7 @@ export async function getTransaction(id) {
 
 export async function updateTransaction(id, data) {
   try {
+    const db = await initDb();
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized");
 
@@ -197,6 +200,7 @@ export async function updateTransaction(id, data) {
 // Get User Transactions
 export async function getUserTransactions(query = {}) {
   try {
+    const db = await initDb();
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized");
 

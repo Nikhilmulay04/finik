@@ -1,6 +1,6 @@
 "use server";
 
-import { db } from "@/lib/prisma";
+import { initDb } from "@/lib/prisma";
 import { subDays } from "date-fns";
 
 // const ACCOUNT_ID = "account-id";
@@ -44,6 +44,7 @@ function getRandomCategory(type) {
 
 export async function seedTransactions() {
   try {
+    const db = await initDb();
     // Generate 90 days of transactions
     const transactions = [];
     let totalBalance = 0;
