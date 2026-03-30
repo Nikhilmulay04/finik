@@ -26,6 +26,24 @@ const Header = async () => {
         <div className="flex items-center space-x-4">
           <SignedIn>
             <Link
+              href="/financialTools"
+              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+            >
+              <Button variant="outline">
+                
+                <span className="hidden md:inline">Financial Tools</span>
+              </Button>
+            </Link>
+            <Link
+              href="/healthScore"
+              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+            >
+              <Button variant="outline">
+                
+                <span className="hidden md:inline">Health Score</span>
+              </Button>
+            </Link>
+            <Link
               href="/dashboard"
               className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
             >
